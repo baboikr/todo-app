@@ -41,7 +41,7 @@ export default function Todo() {
 				/>
 				<button
 					type='submit'
-					className='flex w-full h-[40px] justify-center items-center rounded-md bg-green-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 cursor-pointer transition-all'
+					className='flex w-full h-[40px] justify-center items-center rounded-md bg-green-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-green-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 cursor-pointer transition-all'
 				>
 					Add
 				</button>
