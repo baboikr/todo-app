@@ -21,7 +21,7 @@ export default function Todo() {
 				action='#'
 				method='POST'
 				onSubmit={handleSubmit} // Handle the form submission
-				className='space-y-6 p-14 shadow-md bg-white rounded-md mt-3'
+				className='space-y-6 p-14 sm:p-5 shadow-md bg-white rounded-md mt-3'
 			>
 				<label
 					htmlFor='todo'
@@ -37,17 +37,17 @@ export default function Todo() {
 					onChange={(e) =>
 						setTodo({text: e.target.value, isDone: false})
 					}
-					className='block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6 transition-all'
+					className='block w-full h-[40px] rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6 transition-all'
 				/>
 				<button
 					type='submit'
-					className='flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 cursor-pointer transition-all'
+					className='flex w-full h-[40px] justify-center items-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 cursor-pointer transition-all'
 				>
 					Add
 				</button>
 			</form>
 			<div className='mt-2'>
-				<div className='flex items-start justify-between p-3 bg-white border-b border-gray-200'>
+				<div className='flex items-start justify-between p-5 bg-white border-b border-gray-200'>
 					<h2>
 						Total:
 						<br />
@@ -62,7 +62,7 @@ export default function Todo() {
 						</span>
 					</h2>
 				</div>
-				<ul className='mt-8'>
+				<ul className='mt-8 p-5'>
 					{todos.map((item, index) => (
 						<li
 							key={index}
