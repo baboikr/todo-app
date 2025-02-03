@@ -2,11 +2,12 @@ import {useState} from "react";
 import Input from "./Input";
 import Button from "./Button";
 import TodoList from "./TodoList";
+type Todo = { text: string; isDone: boolean }; // Define the Todo type
 
 export default function Todo() {
 	const [todo, setTodo] = useState({text: "", isDone: false}); // Initialize the todo
-	const [todos, setTodos] = useState([]); // Initialize the todos
-	function handleSubmit(e) {
+	const [todos, setTodos] = useState<Todo[]>([]);	// Initialize the todos
+	function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
 		// Handle the form submission
 		e.preventDefault(); // Prevent the default form submission
 		if (!todo.text) {
@@ -23,7 +24,7 @@ export default function Todo() {
 			<form
 				action='#'
 				method='POST'
-				onSubmit={handleSubmit} // Handle the form submission
+				//onSubmit={} // Handle the form submission
 				className='space-y-6 p-14 sm:p-5 shadow-md bg-white rounded-md mt-3'
 			>
 				<Input // Input component
@@ -44,7 +45,7 @@ export default function Todo() {
 					type='submit'
 					text='Add Todo'
 					disabled={!todo.text}
-					onClick={handleSubmit}
+					onClick={handleSubmit} // Handle the button click
 					icon={
 						<svg
 							xmlns='http://www.w3.org/2000/svg'

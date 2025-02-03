@@ -1,4 +1,5 @@
-export default function Button({type, text, onClick, disabled, icon}) {
+type ButtonProps = { type: 'button' | 'submit' | 'reset'; text: string; onClick?: any; disabled?: boolean; icon?: React.ReactNode };
+export default function Button({type, text, onClick, disabled, icon}: ButtonProps) {
 	return (
 		<button
 			type={type}

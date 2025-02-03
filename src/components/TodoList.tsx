@@ -1,4 +1,5 @@
-export default function TodoList({todos, setTodos}) {
+type TodoListProps = { todos: { text: string; isDone: boolean }[]; setTodos: React.Dispatch<React.SetStateAction<{ text: string; isDone: boolean }[]>> }; // Define the TodoListProps type
+export default function TodoList({todos, setTodos}: TodoListProps) {
 	return (
 		<div>
 			<ul className='mt-8 p-5'>

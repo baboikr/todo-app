@@ -1,3 +1,4 @@
+type InputProps = {	label: string; id: string; name: string; type: string; placeholder: string; value: string; onChange: (e: React.ChangeEvent<HTMLInputElement>) => void };
 export default function Input({
 	label,
 	id,
@@ -6,7 +7,7 @@ export default function Input({
 	placeholder,
 	value,
 	onChange,
-}) {
+}: InputProps) {
 	return (
 		<div>
 			<label htmlFor={id}>{label}</label>
